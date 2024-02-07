@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: wil-playground
-        image: wilkenrivera/wil-playground:latest
+        image: wil42/playground:v1
         ports:
         - containerPort: 80
