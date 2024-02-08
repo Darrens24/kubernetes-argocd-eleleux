@@ -6,6 +6,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "traefik"
 spec:
+  ingressClassName: traefik
   rules:
   - host: "localhost"
     http:
@@ -16,4 +17,4 @@ spec:
           service:
             name: wil-playground-service
             port:
-              number: 80
+              number: 8888
