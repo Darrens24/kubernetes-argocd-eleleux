@@ -61,6 +61,8 @@ argocd login 127.0.0.1:8080 --insecure --username admin --password $(head -n 1 i
 argocd account update-password --current-password $(head -n 1 initial-password.txt) --new-password lunettes
 rm initial-password.txt
 sudo kubectl apply -f wil-playground.yaml
+git config --global user.email "diothugo36@gmail.com"
+git config --global user.name "LeDiabetique"
 # To use a specific cluster
 # kubectl config use-context k3d-mycluster
 
