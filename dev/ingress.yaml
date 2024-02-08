@@ -4,7 +4,7 @@ metadata:
   name: wil-playground-ingress
   namespace: dev
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
+    kubernetes.io/ingress.class: "traefik"
 spec:
   rules:
   - host: "localhost"
@@ -17,5 +17,3 @@ spec:
             name: wil-playground-service
             port:
               number: 80
-  ingressClassName: traefik
-
