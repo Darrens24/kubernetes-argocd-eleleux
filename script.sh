@@ -37,7 +37,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 sudo systemctl restart docker
 
 # Create cluster
-sudo k3d cluster create mycluster --port 8888:80@loadbalancer --kubeconfig-write-default
+sudo k3d cluster create mycluster --port 8888:80@loadbalancer
 # Create namespaces
 sudo kubectl create namespace argocd
 sudo kubectl create namespace dev
@@ -51,6 +51,7 @@ brew install argocd
 sudo kubectl port-forward svc/argocd-server -n argocd 8080:443 &
 
 # cp et chown
+mkdir ~/.kube
 sudo cp /root/.kube/config ~/.kube/config
 sudo chown $USER:$USER ~/.kube/config
 
