@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: wil-argo-app
@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Darrens24/kunernetes-argocd-eleleux.git
+    repoURL: https://github.com/Darrens24/kubernetes-argocd-eleleux.git
     targetRevision: HEAD
     path: dev
   destination:
