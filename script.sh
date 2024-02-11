@@ -47,6 +47,7 @@ sudo kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-
 
 # Install argocd client in the machine mdp:lunettes to store in env
 brew install argocd
+sudo kubectl wait --for=condition=available --timeout=300s deployment/argocd-server -n argocd
 # Open the argocd-server ports and initialize password for admin
 sudo kubectl port-forward svc/argocd-server -n argocd 8080:443 &
 
